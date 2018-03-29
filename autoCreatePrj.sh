@@ -1,0 +1,1 @@
+bee api FAWCarDMS -tables="dsvcb20c,dsvcb20d" -driver=mysql -conn=root:@tcp(127.0.0.1:3306)/fawcar
