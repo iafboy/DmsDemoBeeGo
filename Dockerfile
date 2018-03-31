@@ -4,15 +4,17 @@ FROM golang
 MAINTAINER Dabing
 
 #add beego and other package
-ADD github.com /go/src/github.com
+#ADD github.com /go/src/github.com
 
 #build bee tool script
-ADD build.sh /build.sh
-RUN chmod +x /build.sh
-RUN /build.sh
+#ADD build.sh /build.sh
+#RUN chmod +x /build.sh
+#RUN /build.sh
 
 # install beego
 RUN go get github.com/astaxie/beego
+#RUN go get github.com/beego/bee
+
 
 #add bee tool to PATH
 ENV PATH $PATH:$GOPATH/bin
