@@ -12,21 +12,21 @@ import (
 
 type Dsvcb20c struct {
 	Id                       int       `orm:"column(ID);pk" description:"ID"`
-	NDEALERID                int       `orm:"column(NDEALERID)" description:"经销商ID"`
-	NBRANCHID                int       `orm:"column(NBRANCHID)" description:"网点代码"`
+	NDEALERID                string    `orm:"column(NDEALERID);size(20)" description:"经销商ID"`
+	NBRANCHID                string    `orm:"column(NBRANCHID);size(11)" description:"网点代码"`
 	CSERVICEREQUISITIONNO    string    `orm:"column(CSERVICEREQUISITIONNO);size(13)" description:"委托书，是客户与维修站的一种维修合同，委托单号格式，类别（1）+-+年（4）+月（2）+顺序号（5） 13位"`
-	NVEHICLEID               int       `orm:"column(NVEHICLEID)" description:"车辆档案的ID号"`
+	NVEHICLEID               string    `orm:"column(NVEHICLEID);size(11)" description:"车辆档案的ID号"`
 	CREPAIRSTATUS            string    `orm:"column(CREPAIRSTATUS);size(1)" description:"关于汽车的修理委托书的状态和种类的说明cXLZT='0' 在修，1，结清，2，欠帐"`
-	DENTERDATE               time.Time `orm:"column(DENTERDATE);type(date)" description:"汽车进厂维修并开委托单的日期"`
+	DENTERDATE               time.Time `orm:"column(DENTERDATE);type(date);null" description:"汽车进厂维修并开委托单的日期"`
 	DPROMISEFINISHDATE       time.Time `orm:"column(DPROMISEFINISHDATE);type(date);null" description:"约定盗车时间，经销商与用户约定的维修车辆的预计完工时间"`
 	CFASTREPAIRFLAG          string    `orm:"column(CFASTREPAIRFLAG);size(1);null" description:"快修理"`
-	NOPERATORID              int       `orm:"column(NOPERATORID)" description:"系统操作员"`
-	NSERVICECONSULTANTID     int       `orm:"column(NSERVICECONSULTANTID)" description:"服务顾问，受理客户预约，负责维修车辆客户的接待，负责车辆的故障诊断，并与用户达成协议（任务委托书），负责车辆维修后的电话服务跟踪。负责向用户"`
-	CCONTRACTWORKMODE        string    `orm:"column(CCONTRACTWORKMODE);size(1)" description:"'CBGFS=‘0’，不包，CBGFS=‘1’，包工料，CBGFS=‘2’，包工，若包工方式为''包工料''or''包工''or''此用户工时优惠率''为0 ';"`
+	NOPERATORID              int       `orm:"column(NOPERATORID);null" description:"系统操作员"`
+	NSERVICECONSULTANTID     int       `orm:"column(NSERVICECONSULTANTID);null" description:"服务顾问，受理客户预约，负责维修车辆客户的接待，负责车辆的故障诊断，并与用户达成协议（任务委托书），负责车辆维修后的电话服务跟踪。负责向用户"`
+	CCONTRACTWORKMODE        string    `orm:"column(CCONTRACTWORKMODE);size(1);null" description:"'CBGFS=‘0’，不包，CBGFS=‘1’，包工料，CBGFS=‘2’，包工，若包工方式为''包工料''or''包工''or''此用户工时优惠率''为0 ';"`
 	CPARKINGPOSITION         string    `orm:"column(CPARKINGPOSITION);size(10);null" description:"停车车位"`
 	NMILEAGE                 int       `orm:"column(NMILEAGE);null" description:"'汽车的行驶里程  单位 万公里"`
-	DFIRSTCHECKOUTDATE       string    `orm:"column(DFIRSTCHECKOUTDATE);size(20)" description:"出厂日期"`
-	DCHECKDATE               string    `orm:"column(DCHECKDATE);size(20)" description:"车辆维修后，进行完工审核的日期"`
+	DFIRSTCHECKOUTDATE       string    `orm:"column(DFIRSTCHECKOUTDATE);size(20);null" description:"出厂日期"`
+	DCHECKDATE               string    `orm:"column(DCHECKDATE);size(20);null" description:"车辆维修后，进行完工审核的日期"`
 	NEXAMINEID               int       `orm:"column(NEXAMINEID);null" description:"'质量检查员：汽车维修质量的检验，不合格品返修质量的监督，检查。"`
 	NCHECKERID               int       `orm:"column(NCHECKERID);null" description:" '进行完工审核的人 他有工时优惠和材料优惠的权利 来源于DXT004';"`
 	NCHECKBILLID             int       `orm:"column(NCHECKBILLID);null" description:"'维修的竣工单号 ，可以自动生成单号"`
@@ -43,7 +43,7 @@ type Dsvcb20c struct {
 	CPROBLEMSETTLEFLAG       string    `orm:"column(CPROBLEMSETTLEFLAG);size(1);null" description:"'问题解决标识';"`
 	CMALFUNCTIONDESCRIPTION  string    `orm:"column(CMALFUNCTIONDESCRIPTION);size(100);null" description:"'故障描述';"`
 	CREMARK                  string    `orm:"column(CREMARK);size(100);null" description:"没有可录入项，但需要特别说明的信息"`
-	DTSTAMP                  time.Time `orm:"column(DTSTAMP);type(timestamp)"`
+	DTSTAMP                  time.Time `orm:"column(DTSTAMP);type(datetime);null;auto_now_add"`
 	NLINKMANID               int       `orm:"column(NLINKMANID);null"`
 	NRVTIMES                 int       `orm:"column(NRVTIMES);null" description:"回访次数"`
 	CCUSTOMERCODE            string    `orm:"column(CCUSTOMERCODE);size(20);null" description:"客户代码"`
@@ -95,7 +95,7 @@ type Dsvcb20c struct {
 	CCHANGEORSCRAPFLAG       string    `orm:"column(CCHANGEORSCRAPFLAG);size(1);null" description:"退换车或报废车标识';"`
 	NADVISORID               int       `orm:"column(NADVISORID);null" description:"'专属服务顾问id';"`
 	CUPLOADFLAG              string    `orm:"column(CUPLOADFLAG);size(1);null" description:"健康档案上传标识';"`
-	CUPLOADDATE              string    `orm:"column(CUPLOADDATE);size(20)" description:"健康档案上传时间';"`
+	CUPLOADDATE              string    `orm:"column(CUPLOADDATE);size(20);null" description:"健康档案上传时间';"`
 	COTOCODE                 string    `orm:"column(COTOCODE);size(15);null" description:"o2o代码';"`
 }
 

@@ -1,0 +1,632 @@
+swagger: "2.0"
+info:
+  title: beego Test API
+  description: beego has a very cool tools to autogenerate documents for your API
+  version: 1.0.0
+  termsOfService: http://beego.me/
+  contact:
+    email: astaxie@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+basePath: /v1
+paths:
+  /dsvcb20c/:
+    get:
+      tags:
+      - dsvcb20c
+      description: get Dsvcb20c
+      operationId: Dsvcb20cController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Dsvcb20c'
+        "403":
+          description: ""
+    post:
+      tags:
+      - dsvcb20c
+      description: create Dsvcb20c
+      operationId: Dsvcb20cController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Dsvcb20c content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Dsvcb20c'
+      responses:
+        "201":
+          description: '{int} models.Dsvcb20c'
+        "403":
+          description: body is empty
+  /dsvcb20c/{id}:
+    get:
+      tags:
+      - dsvcb20c
+      description: get Dsvcb20c by id
+      operationId: Dsvcb20cController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Dsvcb20c'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - dsvcb20c
+      description: update the Dsvcb20c
+      operationId: Dsvcb20cController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Dsvcb20c content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Dsvcb20c'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Dsvcb20c'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - dsvcb20c
+      description: delete the Dsvcb20c
+      operationId: Dsvcb20cController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /dsvcb20d/:
+    get:
+      tags:
+      - dsvcb20d
+      description: get Dsvcb20d
+      operationId: Dsvcb20dController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Dsvcb20d'
+        "403":
+          description: ""
+    post:
+      tags:
+      - dsvcb20d
+      description: create Dsvcb20d
+      operationId: Dsvcb20dController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Dsvcb20d content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Dsvcb20d'
+      responses:
+        "201":
+          description: '{int} models.Dsvcb20d'
+        "403":
+          description: body is empty
+  /dsvcb20d/{id}:
+    get:
+      tags:
+      - dsvcb20d
+      description: get Dsvcb20d by id
+      operationId: Dsvcb20dController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Dsvcb20d'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - dsvcb20d
+      description: update the Dsvcb20d
+      operationId: Dsvcb20dController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Dsvcb20d content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Dsvcb20d'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Dsvcb20d'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - dsvcb20d
+      description: delete the Dsvcb20d
+      operationId: Dsvcb20dController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+definitions:
+  models.Dsvcb20c:
+    title: Dsvcb20c
+    type: object
+    properties:
+      CACROSSCURRENTPERIODFLAG:
+        description: ' ''委托书是否为本期产生的标识 '';'
+        type: string
+      CBJADDFLAG:
+        description: 备件预估新增标识';
+        type: string
+      CBJDELFLAG:
+        description: '''备件预估删除标识'';'
+        type: string
+      CBJUPDFLAG:
+        description: '''备件预估修改标识'';'
+        type: string
+      CCHANGEORSCRAPFLAG:
+        description: 退换车或报废车标识';
+        type: string
+      CCONTRACTWORKMODE:
+        description: '''CBGFS=‘0’，不包，CBGFS=‘1’，包工料，CBGFS=‘2’，包工，若包工方式为''''包工料''''or''''包工''''or''''此用户工时优惠率''''为0
+          '';'
+        type: string
+      CCREDENTIALS:
+        description: '  修车人的证件号'';'
+        type: string
+      CCUSTOMERADDRESS:
+        description: 客户地址
+        type: string
+      CCUSTOMERCODE:
+        description: 客户代码
+        type: string
+      CCUSTOMERNAME:
+        description: '''客户名称'';'
+        type: string
+      CDIAGNOSENOPASSFLAG:
+        description: '''一次性问诊未通过标识(0通过一次性问诊,1未通过一次性问诊)'';'
+        type: string
+      CENGINENO:
+        description: 发动机号
+        type: string
+      CFASTREPAIRFLAG:
+        description: 快修理
+        type: string
+      CFEEFORESEEFLAG:
+        description: 费用预估状态是”为预估准确，“否”为预估不准确，“空白”如果车辆未结算';
+        type: string
+      CITEMADDFLAG:
+        description: '''项目新增标识'';'
+        type: string
+      CITEMDELFLAG:
+        description: '''项目删除标识'';'
+        type: string
+      CITEMUPDFLAG:
+        description: '''项目修改标识'';'
+        type: string
+      CLICENCETAG:
+        description: 牌照号
+        type: string
+      CLINKMANADDRESS:
+        description: 联系人地址
+        type: string
+      CLINKMANMOBILE:
+        description: 联系人移动电话
+        type: string
+      CLINKMANNAME:
+        description: 联系人名称
+        type: string
+      CLINKMANPOSTNO:
+        description: 联系人邮编
+        type: string
+      CLINKMANTEL:
+        description: 联系人电话
+        type: string
+      CMALFUNCTIONDESCRIPTION:
+        description: '''故障描述'';'
+        type: string
+      CMOBILE:
+        description: 移动电话
+        type: string
+      CONTIMEFLAG:
+        description: 按时交车状态“是”为按时交车，“否”为未按时交车，“空白”如果车辆未结算或者未做服务顾问打印结算单则显示空白';
+        type: string
+      COTOCODE:
+        description: o2o代码';
+        type: string
+      COUTSERVICEFLAG:
+        description: 外出服务标识
+        type: string
+      COWEFLAG:
+        description: ' ''表示该委托单存在欠款。月结时，对CXLZT=2（欠款）的委托单，打上此标识'
+        type: string
+      CPARKINGPOSITION:
+        description: 停车车位
+        type: string
+      CPDIS:
+        description: PDIS标识
+        type: string
+      CPOSTNO:
+        description: 邮编
+        type: string
+      CPROBLEMSETTLEFLAG:
+        description: '''问题解决标识'';'
+        type: string
+      CPRODUCTCODE:
+        description: 产品代码
+        type: string
+      CRADIOPWD:
+        description: 收音机密码
+        type: string
+      CREMARK:
+        description: 没有可录入项，但需要特别说明的信息
+        type: string
+      CREPAIRSTATUS:
+        description: 关于汽车的修理委托书的状态和种类的说明cXLZT='0' 在修，1，结清，2，欠帐
+        type: string
+      CREVOKEFLAG:
+        description: 作废标识
+        type: string
+      CROADTRIDE:
+        description: 是否路试
+        type: string
+      CSERVICEREQUISITIONNO:
+        description: 委托书，是客户与维修站的一种维修合同，委托单号格式，类别（1）+-+年（4）+月（2）+顺序号（5） 13位
+        type: string
+      CSPBJNOCLM:
+        description: 备件维修委托书标识（默认0, 为1时不参与三包保修记录统计）';
+        type: string
+      CTEL:
+        description: 电话
+        type: string
+      CTRAFFICCARFLAG:
+        description: 是否备用车　1是0否';
+        type: string
+      CUPLOADDATE:
+        description: 健康档案上传时间';
+        type: string
+      CUPLOADFLAG:
+        description: 健康档案上传标识';
+        type: string
+      CVEHICLENAME:
+        description: 车型名称
+        type: string
+      CVEHICLETYPECODE:
+        description: 车型代码
+        type: string
+      CVIN:
+        description: 底盘号
+        type: string
+      CWASHCARCODE:
+        description: 洗车标识，是否洗车
+        type: string
+      CWTSSECONDPRINTFLAG:
+        description: 委托书变为一次性问诊未通过后是否再次打印';
+        type: string
+      DCHECKDATE:
+        description: 车辆维修后，进行完工审核的日期
+        type: string
+      DENTERDATE:
+        description: 汽车进厂维修并开委托单的日期
+        type: string
+        format: string
+      DFIRSTCHECKOUTDATE:
+        description: 出厂日期
+        type: string
+      DFIRSTPRINTDATE:
+        description: '''服务顾问第一次打印结算单时间'';'
+        type: string
+      DLICENCEDATE:
+        description: 发牌日期
+        type: string
+      DNEXTBYDATE:
+        description: 下次保养时间
+        type: string
+        format: string
+      DPROMISEFINISHDATE:
+        description: 约定盗车时间，经销商与用户约定的维修车辆的预计完工时间
+        type: string
+        format: string
+      DSALEDATE:
+        description: 车辆销售日期
+        type: string
+        format: string
+      DTSTAMP:
+        type: string
+        format: string
+      DWTSFIRSTPRINTDATE:
+        description: '''服务顾问第一次打印委托书时间'';'
+        type: string
+      Id:
+        description: ID
+        type: integer
+        format: int64
+      NADVISORID:
+        description: '''专属服务顾问id'';'
+        type: integer
+        format: int64
+      NBRANCHID:
+        description: 网点代码
+        type: string
+      NCHECKBILLID:
+        description: '''维修的竣工单号 ，可以自动生成单号'
+        type: integer
+        format: int64
+      NCHECKERID:
+        description: ' ''进行完工审核的人 他有工时优惠和材料优惠的权利 来源于DXT004'';'
+        type: integer
+        format: int64
+      NCONTRACTEXPEN:
+        description: '''经销商与客户共同确定的维修工时费用，(含税)'';'
+        type: number
+        format: double
+      NCONTRACTID:
+        description: ' ''修车的合同号 用于防止与客户的纠纷。自动生成'';'
+        type: integer
+        format: int64
+      NDEALERID:
+        description: 经销商ID
+        type: string
+      NEFFECTIVEMANHAUR:
+        description: '''总计的加工工时 单位：小时'';'
+        type: number
+        format: double
+      NEXAMINEID:
+        description: '''质量检查员：汽车维修质量的检验，不合格品返修质量的监督，检查。'
+        type: integer
+        format: int64
+      NLINKMANCITYID:
+        description: 联系人市县ID
+        type: integer
+        format: int64
+      NLINKMANID:
+        type: integer
+        format: int64
+      NLINKMANPROVINCEID:
+        description: 联系人省区ID
+        type: integer
+        format: int64
+      NMANHAUR:
+        description: '''修理项目的合计工时。'';'
+        type: number
+        format: double
+      NMATECOST:
+        description: '''一般结算时的材料成本。进价与数量的乘积，包含税。'';'
+        type: number
+        format: double
+      NMILEAGE:
+        description: '''汽车的行驶里程  单位 万公里'
+        type: integer
+        format: int64
+      NNEXTBYMILES:
+        description: 下次保养里程
+        type: number
+        format: double
+      NOPERATORID:
+        description: 系统操作员
+        type: integer
+        format: int64
+      NPRINTPERSONID:
+        description: 第一次打印人
+        type: integer
+        format: int64
+      NRESCUEEXPEN:
+        description: '''施救费 指的是外出救援等发生的费用(含税)'';'
+        type: number
+        format: double
+      NRVTIMES:
+        description: 回访次数
+        type: integer
+        format: int64
+      NSERVICECONSULTANTID:
+        description: 服务顾问，受理客户预约，负责维修车辆客户的接待，负责车辆的故障诊断，并与用户达成协议（任务委托书），负责车辆维修后的电话服务跟踪。负责向用户
+        type: integer
+        format: int64
+      NSTANDARDRATIONID:
+        description: '''维修结算使用的工时定额标准，按照车型和客户种类的不同而不同'';'
+        type: integer
+        format: int64
+      NTRAFFICSUBSIDY:
+        description: 交通补助
+        type: number
+        format: double
+      NVEHICLEID:
+        description: 车辆档案的ID号
+        type: string
+      NWTSPRINTPERSONID:
+        description: 委托书第一次打印人';
+        type: integer
+        format: int64
+  models.Dsvcb20d:
+    title: Dsvcb20d
+    type: object
+    properties:
+      CACROSSCURRENTPERIODFLAG:
+        description: 跨期标识
+        type: string
+      CBEGINFLAG:
+        description: 开始标识
+        type: string
+      CFINISHFLAG:
+        description: 完工标识
+        type: string
+      CITEMCODE:
+        description: 修理项目的代码
+        type: string
+      CITEMNAME:
+        description: 修理项目的名称
+        type: string
+      CKIND:
+        description: '''修理项目的性质决定该修理项目是否是收费的项目。性质 0 正常,1 首保,2 索赔,3 免费,4 另项'';'
+        type: string
+      CKINDBACK:
+        description: 原维修类别数据备份
+        type: string
+      CPURSUEITEMFLAG:
+        description: Lzjxm=1 新项目 追加项目
+        type: string
+      CREMARK:
+        description: 备注
+        type: string
+      CREMINDFLAG:
+        description: 是否提醒标识
+        type: string
+      CREPAIRAGAINFLAG:
+        description: lfg=1返工的项目 lfg=1（返工）的项目不允许修改'
+        type: string
+      CRETURNFLAG:
+        description: 预警标识
+        type: string
+      CRETURNFLAG1:
+        description: 预警标识是否允许修改0允许1不允许
+        type: string
+      CRETURNFLAG2:
+        description: 返修标识
+        type: string
+      DBEGINDATE:
+        description: 修车开始的时间
+        type: string
+        format: string
+      DTASKBEGINDATE:
+        description: 分配修理项目的时间
+        type: string
+        format: string
+      DTASKFINISHDATE:
+        description: 完成该修理项目的时间
+        type: string
+        format: string
+      DTSTAMP:
+        type: string
+        format: string
+      Id:
+        description: ID
+        type: integer
+        format: int64
+      NEFFECTIVEMANHAUR:
+        description: 实际有效的工作时间，应等于工时'
+        type: number
+        format: double
+      NMAINID:
+        description: 委托书ID
+        type: string
+      NMANHAUR:
+        description: '''修理项目的工需要工作时间数'';'
+        type: number
+        format: double
+      NMANHAURDISCOUNTRATE:
+        description: '''单个项目的工时优惠率'';'
+        type: number
+        format: double
+      NMANHAUREXPEN:
+        description: '''修理项目的工时费等于工时乘以工时单价（使用标准工时时）'';'
+        type: number
+        format: double
+      NPRIMARYREPAIRMANID:
+        description: 修车人
+        type: integer
+        format: int64
+      NWORKGROUPID:
+        description: 维修车辆的班组
+        type: number
+        format: double
+tags:
+- name: dsvcb20c
+  description: |
+    Dsvcb20cController operations for Dsvcb20c
+- name: dsvcb20d
+  description: |
+    Dsvcb20dController operations for Dsvcb20d
